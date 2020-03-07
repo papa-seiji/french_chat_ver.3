@@ -1,0 +1,153 @@
+.wrapper{
+  padding: 7px;
+  height: 100%;
+  width: 1223px;
+  // background-color: lightcyan;
+  .chat-side{
+    // height: ;
+    // width: 300px;
+    background-color:navy ;
+    border-radius: 15px;
+    // margin-top: 85px;
+    
+    .chat-side-header{
+      height: 90px;
+      // width: 300px;
+      list-style: none;
+      line-height: 4;
+      background: linear-gradient(to right, #33f 0%, #33f 33%, #fff 33%, #fff 66%, #f33 66%);
+      border-radius: 15px;
+      
+      .chat-side-header__box{
+        width: 100%;
+        color :white;
+        font-size: 18px;
+        
+
+        &__user {
+          display: flex;
+          justify-content: space-between;
+          width: 91%;
+          margin-left: 20px;
+          color: #f33;
+          font-size: 20px;
+          line-height: 1;
+          margin: 0 auto;
+          padding: 40px;
+          position: relative;
+          animation: rollkAnime 3.9s linear infinite;
+
+          @keyframes rollkAnime{
+          50% {
+            color    : #66ff66;
+            transform: rotateX(180deg);
+          }
+          100% {
+            color    : #6666ff;
+            transform: rotateX(360deg);
+          }
+
+        }
+          .pencil{
+            color: navy;
+            margin-left: 90px;
+            position: absolute;
+            right: 100px;
+          }
+          
+          .gea{
+            color: navy;
+            margin-right: 33px;
+          }
+        }
+      }
+    }
+  }
+}
+  
+.groups{
+  height: 689px;
+  padding: 40px 35px;
+  text-align: center;
+  line-height: 1.5;
+  margin-left: 5px;
+  overflow: scroll;
+
+  .group{
+    color: #fff;
+    margin:0 auto;
+    padding: 0 20 0 20px;
+    display: inline;
+    
+    &__name{
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      margin: 8px 0 0 0px;
+      animation   : scrollAnime 12s linear infinite;
+    }
+      
+    &__message{
+      color: #fff ;
+      width: 260px;
+      height: 17px;
+      font-size: 14px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  }
+
+
+  .css-cube {                                      /* 立体の大きさ傾きの指定 */
+    width: 90px;
+    height: 90px;
+    margin: 5%;
+    border: none;
+    transform-style: preserve-3d;                  /* ３Ｄで表示 */
+    transform:rotateY(-30deg) rotateX(-30deg) rotateZ(10deg); /* 立体の傾き */
+    display : inline-block;
+    animation: cubeAnime 4.0s linear infinite;       /* 動きの指定 */
+  }
+  @keyframes cubeAnime{                            /* 回転方向の指定 */
+    50% { transform: rotateY(-30deg) rotateX(-30deg) rotateZ(10deg);}
+    100% { transform: rotateY(330deg) rotateX(330deg) rotateZ(370deg);}
+  }
+  .css-face {                                      /* 各面の指定 */
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    border: 2px solid transparent;
+    line-height: 100px;
+    // font-size: 50px;
+    color: black;
+    text-align: center;
+    opacity: 0.8;                                  /* 透明度を指定 */
+    backface-visibility : visible;                 /* 裏面を表示 */
+  }
+  .css-forward {                                   /* 前面の指定 */
+    background: linear-gradient(to right, rgb(38, 134, 38) 0%, rgb(38, 134, 38) 33%, #fff 33%, #fff 66%, #f33 66%);
+    transform: translateZ(50px);
+  }
+  .css-reverse {                                   /* 後面の指定 */
+    background:white;
+    transform: rotateY(180deg) translateZ(50px);
+  }
+  .css-right {                                     /* 右面の指定 */
+    background: red;
+    transform: rotateY(90deg) translateZ(50px);
+  }
+  .css-left {                                      /* 左面の指定 */
+    background: aqua;
+    transform: rotateY(-90deg) translateZ(50px);
+  }
+  .css-top {                                       /* 上面の指定 */
+    // background: yellow;
+    background: linear-gradient(to right, #33f 0%, #33f 33%, #fff 33%, #fff 66%, #f33 66%);
+    transform: rotateX(90deg) translateZ(50px);
+  }
+  .css-bottom {                                    /* 下面の指定 */
+    background: fuchsia;
+    transform: rotateX(-90deg) translateZ(50px);
+  }
+}
+

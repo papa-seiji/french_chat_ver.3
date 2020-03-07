@@ -1,0 +1,30 @@
+%wrapper
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'NEW-Messageを入れてください!! 　　　　　　　　　　　　　　　                 写真はココ 👉'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('far', 'images', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+  .id_back-ground
+    -# = image_tag("スクリーンショット 2020-02-19 2.05.19.png")
+    -# = link_to current_user, group_path(current_user), class: "header"
+    -# = link_to "詳細",edit_group_path(@group.id),{class:'show'}
+    .messages
+      = render @messages
+    
+    .chat-main__main-header
+      .chat-main__main-header__left
+        %h2.chat-main__main-header__left__into-group
+          = @group.name
+        %ul.chat-main__main-header__left-box
+          %li.chat-main__main-header__left-box__into__meber
+            Member:
+          %li.chat-main__main-header__left-box__into__meber-meber 
+            - @group.group_users.each do |group_user|
+              = group_user.user.name
+      = link_to"Edit", edit_group_path(@group.id), {class: "btn"}
+      
+
+

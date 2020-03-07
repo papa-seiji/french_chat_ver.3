@@ -1,0 +1,14 @@
+<%# avatar_img_prevでプレビューを表示します。通常はhiddenです。avatar_present_imgは現在の画像です。post_imgがイベントが発火のフックになります。 %>
+
+<div class="circle-avatar">
+    <img id="avatar_img_prev" src="#" class='hidden' />  <!-- 1行追加 -->
+  <% if current_user.persisted? && current_user.avatar? %>
+    <%= image_tag current_user.avatar.to_s, class: 'avatar_present_img' %>    <!-- classを追加 -->
+    <label><%= f.check_box :remove_avatar %> 画像を削除</label>
+  <% else %>
+    <%= image_tag 'no_avatar.png', class: 'avatar_present_img' %>   <!-- classを追加 -->
+    <%= f.hidden_field :avatar_cache %>
+  <% end %>
+    <%= f.file_field :avatar, id: 'post_img' %>   <!-- idを追加 -->
+</div>
+

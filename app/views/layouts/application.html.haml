@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ChatSpac2e
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    %script{:src => "intense.min.js", :type => "text/javascript"}
+    :css
+    .fullscreen-image
+    :javascript
+      var elements = document.querySelectorAll( '.fullscreen-image' );
+      Intense( elements );
+
+
+  %body
+    = render 'layouts/notifications'
+    = yield

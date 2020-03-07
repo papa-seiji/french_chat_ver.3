@@ -1,0 +1,29 @@
+.message{data: {message: {id: message.id}}}
+  .upper-message
+    .upper-message__user-name
+      = message.user.name
+    .upper-message__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      
+.scroll
+  %span.lower-message
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+= image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
+%ul.more_list
+  %li.botn
+    = link_to '詳細', "/messages/#{message.id}", method: :get
+  - if user_signed_in? && current_user.id == message.user_id
+    %li.botn
+      = link_to '編集', "/messages/#{message.id}/edit", method: :get
+    %li.botn
+      = link_to '削除', "/messages/#{message.id}", method: :delete
+
+
+
+
+
+
+

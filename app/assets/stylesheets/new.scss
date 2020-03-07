@@ -1,0 +1,66 @@
+.account-page{
+  background: linear-gradient(to right, #33f 0%, #33f 33%, #fff 33%, #fff 66%, #f33 66%);
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+
+  .account-page__inner{
+    width: 850px;
+    height: 700px;
+    text-align: center;
+    line-height: 4;
+
+    .account-page__inner--left{
+
+      .Log_in{
+        color: navy;
+        font-size: 60px;
+        font-weight: bolder;
+      }
+      .create{
+        font-weight: bolder;
+        font-size: 17px;
+        background-color: lightgray;
+        border-radius: 15px;
+        margin-right: 10px;
+      }
+      .btn{
+        background: linear-gradient(to right, #33f 0%, #33f 33%, #fff 33%, #fff 66%, #f33 66%);
+        color: black;
+        font-weight: bolder;
+        border: 1px solid;
+      }
+    }
+    .account-page__inner--right{
+      float: left;
+      width: 50%;
+
+      .new_user{
+        color: red;
+        
+        label{
+          font-weight: bold;
+          font-size: 18px;
+        }
+      }
+      .input#user_email{
+        border-radius: 10px;
+      }
+      input#user_password{
+        text-decoration: 1px underline;
+      }
+      .actions{
+
+        .btn{
+        //   font: black;
+        //   // float: left;
+        //   // margin-top: 20px;
+          border: 1px solid;
+        //   // color: #fff;
+          // background-color: #38aef0;
+          background: linear-gradient(to right, #33f 0%, #33f 33%, #fff 33%, #fff 66%, #f33 66%);
+        }
+      }
+    }
+  }
+}
