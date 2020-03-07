@@ -21,8 +21,6 @@ class MessagesController < ApplicationController
     end
   end
 
-  
-
   def edit
   end
 
@@ -31,9 +29,6 @@ class MessagesController < ApplicationController
     group = Group.find(params[:id])
     group.destroy
   end
-
-  
-  
 
   private
 

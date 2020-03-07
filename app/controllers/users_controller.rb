@@ -23,10 +23,6 @@ class UsersController < ApplicationController
     @group = @group.users
   end
 
-  
-
-
-
   private
 
   def user_params
