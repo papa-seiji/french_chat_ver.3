@@ -12,6 +12,6 @@ class User < ApplicationRecord
   has_many :follows, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
-  validates :name, presence: true, length: { maximum: 6 }
+  validates :name, presence: true, length: { maximum: 20 }
 
 end
