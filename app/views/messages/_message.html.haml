@@ -10,6 +10,13 @@
     - if message.content.present?
       %p.lower-message__content
         = message.content
+
+  // いいねボタンの機能
+.btn_1
+  %button#up イイね!👍❤️
+  #disp_count 0
+  %button#down ↓
+
 = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 
 %ul.more_list

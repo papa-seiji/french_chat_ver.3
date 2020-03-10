@@ -94,11 +94,11 @@
   
 
   .messages{
-    margin-left: 100px;
-    line-height: 3;
-    padding: 55px;
+    margin-left: 126px;
+    line-height: 4;
+    padding: 2px;
     width: 980px;
-    height: 559px;
+    height: 660px;
     overflow: scroll;
     font-weight: bolder;
     
@@ -153,15 +153,55 @@
     }
     
   }
+
+  // イイねボタン一式
+  .btn_1{
+    display: flex;
+  }
   
-      .lower-message__image{
-        height: 215px;
-        width:180px;
-        margin-top: 20px;
-        border-radius: 8px;
-        box-shadow : 36px 15px 20px rgba(0, 0, 127, 0.71);  /* 画像の影 */
-      }
+  #up{
+    border: 1px solid teal;
+    align-items: center;
+    padding-left: 14px;
+    border-radius: 5px 0 0 5px;
+    background-color: teal;
+    font-weight: bold;
+    color: aliceblue;
+  }
   
+  #disp_count{
+    color: red;
+    border: 1px solid black;
+    height: 22px;
+    font-size: 12px;
+    line-height: 21px;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  #down{
+    border: 1px solid;
+    margin-left: 33px;
+    height: 17px;
+    width: 17px;
+    margin-top: 6px;
+    padding-right: 15px;
+    border-radius: 5px;
+    background-color: teal;
+    font-weight: bold;
+    color: aliceblue;
+  }
+
+// 画像
+.lower-message__image{
+  height: 215px;
+  width:180px;
+  margin-top: 8px;
+  border-radius: 8px;
+  box-shadow : 36px 15px 20px rgba(0, 0, 127, 0.71);  /* 画像の影 */
+  display: flex;
+}
+      
+      
   
   .chat-main__main-header{
     background-color: #f33;
