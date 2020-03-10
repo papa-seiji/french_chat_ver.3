@@ -36,18 +36,18 @@ describe User do
       expect(user.errors[:password_confirmation]).to include("doesn't match Password")
     end
 
-    # 6. nameが7文字以上であれば登録できないこと
-    it "is invalid with a name that has more than 7 characters " do
-      user = build(:user, name: "aaaaaaaa")
-      user.valid?
-      expect(user.errors[:name]).to include("is too long (maximum is 6 characters)")
-    end
+    # # 6. nameが7文字以上であれば登録できないこと
+    # it "is invalid with a name that has more than 7 characters " do
+    #   user = build(:user, name: "aaaaaaaa")
+    #   user.valid?
+    #   expect(user.errors[:name]).to include("is too long (maximum is 6 characters)")
+    # end
 
-    # 7. nameが6文字以下では登録できること
-    it "is valid with a name that has less than 6 characters " do
-      user = build(:user, name: "aaaaaa")
-      expect(user).to be_valid
-    end
+    # # 7. nameが6文字以下では登録できること
+    # it "is valid with a name that has less than 6 characters " do
+    #   user = build(:user, name: "aaaaaa")
+    #   expect(user).to be_valid
+    # end
 
     # 8. 重複したemailが存在する場合登録できないこと
     it "is invalid with a duplicate email address" do
