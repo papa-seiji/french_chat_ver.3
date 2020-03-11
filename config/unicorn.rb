@@ -1,7 +1,7 @@
 
                                                           
 
-# #サーバ上でのアプリケーションコードが設置されているディレクトリを変数に入れておく
+#サーバ上でのアプリケーションコードが設置されているディレクトリを変数に入れておく
 # app_path = File.expand_path('../../', __FILE__)
 
 # #アプリケーションサーバの性能を決定する
@@ -78,6 +78,6 @@ before_fork do |server, worker|
   end
 end
 
-after_fork do |_server, _worker|
-  defined?(ActiveRecord::Base) && ActiveRecord::Base.establish_connection
-end
+# after_fork do |_server, _worker|
+#   defined?(ActiveRecord::Base) && ActiveRecord::Base.establish_connection
+# end
